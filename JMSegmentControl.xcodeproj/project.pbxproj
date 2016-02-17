@@ -13,6 +13,14 @@
 		1A1731E01C7454EC00AE93A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1731DE1C7454EC00AE93A4 /* Main.storyboard */; };
 		1A1731E21C7454EC00AE93A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A1731E11C7454EC00AE93A4 /* Assets.xcassets */; };
 		1A1731E51C7454EC00AE93A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1731E31C7454EC00AE93A4 /* LaunchScreen.storyboard */; };
+		1A1731F11C7458F100AE93A4 /* JMSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1731EE1C7458F100AE93A4 /* JMSegmentControl.m */; };
+		1A1731F21C7458F100AE93A4 /* segItemBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1731EF1C7458F100AE93A4 /* segItemBg.png */; };
+		1A1731F31C7458F100AE93A4 /* segItemBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1731F01C7458F100AE93A4 /* segItemBg@2x.png */; };
+		1A1731F81C7459AF00AE93A4 /* UIButton+JMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1731F71C7459AF00AE93A4 /* UIButton+JMExtension.m */; };
+		1A1732001C74782500AE93A4 /* Tab_Mine_Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1731FC1C74782500AE93A4 /* Tab_Mine_Selected@2x.png */; };
+		1A1732011C74782500AE93A4 /* Tab_Mine_Selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1731FD1C74782500AE93A4 /* Tab_Mine_Selected@3x.png */; };
+		1A1732021C74782500AE93A4 /* Tab_Mine_UnSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1731FE1C74782500AE93A4 /* Tab_Mine_UnSelected@2x.png */; };
+		1A1732031C74782500AE93A4 /* Tab_Mine_UnSelected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1731FF1C74782500AE93A4 /* Tab_Mine_UnSelected@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,16 @@
 		1A1731E11C7454EC00AE93A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A1731E41C7454EC00AE93A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A1731E61C7454EC00AE93A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A1731ED1C7458F100AE93A4 /* JMSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSegmentControl.h; sourceTree = "<group>"; };
+		1A1731EE1C7458F100AE93A4 /* JMSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSegmentControl.m; sourceTree = "<group>"; };
+		1A1731EF1C7458F100AE93A4 /* segItemBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segItemBg.png; sourceTree = "<group>"; };
+		1A1731F01C7458F100AE93A4 /* segItemBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segItemBg@2x.png"; sourceTree = "<group>"; };
+		1A1731F61C7459AF00AE93A4 /* UIButton+JMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JMExtension.h"; sourceTree = "<group>"; };
+		1A1731F71C7459AF00AE93A4 /* UIButton+JMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JMExtension.m"; sourceTree = "<group>"; };
+		1A1731FC1C74782500AE93A4 /* Tab_Mine_Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tab_Mine_Selected@2x.png"; sourceTree = "<group>"; };
+		1A1731FD1C74782500AE93A4 /* Tab_Mine_Selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tab_Mine_Selected@3x.png"; sourceTree = "<group>"; };
+		1A1731FE1C74782500AE93A4 /* Tab_Mine_UnSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tab_Mine_UnSelected@2x.png"; sourceTree = "<group>"; };
+		1A1731FF1C74782500AE93A4 /* Tab_Mine_UnSelected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tab_Mine_UnSelected@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,9 @@
 		1A1731D41C7454EC00AE93A4 /* JMSegmentControl */ = {
 			isa = PBXGroup;
 			children = (
+				1A1731F41C7459AF00AE93A4 /* Category */,
+				1A1731EC1C7458F100AE93A4 /* Segment */,
+				1A1731FB1C74782500AE93A4 /* Resources */,
 				1A1731D81C7454EC00AE93A4 /* AppDelegate.h */,
 				1A1731D91C7454EC00AE93A4 /* AppDelegate.m */,
 				1A1731DB1C7454EC00AE93A4 /* ViewController.h */,
@@ -77,6 +98,45 @@
 				1A1731D61C7454EC00AE93A4 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A1731EC1C7458F100AE93A4 /* Segment */ = {
+			isa = PBXGroup;
+			children = (
+				1A1731ED1C7458F100AE93A4 /* JMSegmentControl.h */,
+				1A1731EE1C7458F100AE93A4 /* JMSegmentControl.m */,
+				1A1731EF1C7458F100AE93A4 /* segItemBg.png */,
+				1A1731F01C7458F100AE93A4 /* segItemBg@2x.png */,
+			);
+			path = Segment;
+			sourceTree = "<group>";
+		};
+		1A1731F41C7459AF00AE93A4 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1A1731F51C7459AF00AE93A4 /* UIButton */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		1A1731F51C7459AF00AE93A4 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				1A1731F61C7459AF00AE93A4 /* UIButton+JMExtension.h */,
+				1A1731F71C7459AF00AE93A4 /* UIButton+JMExtension.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		1A1731FB1C74782500AE93A4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1A1731FC1C74782500AE93A4 /* Tab_Mine_Selected@2x.png */,
+				1A1731FD1C74782500AE93A4 /* Tab_Mine_Selected@3x.png */,
+				1A1731FE1C74782500AE93A4 /* Tab_Mine_UnSelected@2x.png */,
+				1A1731FF1C74782500AE93A4 /* Tab_Mine_UnSelected@3x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,9 +196,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A1731F31C7458F100AE93A4 /* segItemBg@2x.png in Resources */,
+				1A1732021C74782500AE93A4 /* Tab_Mine_UnSelected@2x.png in Resources */,
+				1A1732031C74782500AE93A4 /* Tab_Mine_UnSelected@3x.png in Resources */,
 				1A1731E51C7454EC00AE93A4 /* LaunchScreen.storyboard in Resources */,
+				1A1732001C74782500AE93A4 /* Tab_Mine_Selected@2x.png in Resources */,
 				1A1731E21C7454EC00AE93A4 /* Assets.xcassets in Resources */,
 				1A1731E01C7454EC00AE93A4 /* Main.storyboard in Resources */,
+				1A1732011C74782500AE93A4 /* Tab_Mine_Selected@3x.png in Resources */,
+				1A1731F21C7458F100AE93A4 /* segItemBg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A1731F11C7458F100AE93A4 /* JMSegmentControl.m in Sources */,
 				1A1731DD1C7454EC00AE93A4 /* ViewController.m in Sources */,
+				1A1731F81C7459AF00AE93A4 /* UIButton+JMExtension.m in Sources */,
 				1A1731DA1C7454EC00AE93A4 /* AppDelegate.m in Sources */,
 				1A1731D71C7454EC00AE93A4 /* main.m in Sources */,
 			);
@@ -213,7 +281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -251,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -264,6 +332,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JMSegmentControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = James.JMSegmentControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -275,6 +344,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JMSegmentControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = James.JMSegmentControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
