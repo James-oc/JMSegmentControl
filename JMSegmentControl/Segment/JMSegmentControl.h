@@ -21,17 +21,59 @@ typedef UIButton * (^JMSegmentControlViewBlock) (JMSegmentControl *segmentContro
 
 @property (nonatomic, assign) id<JMSegmentControlDelegate > delegate;
 
+/**
+ *@description 自定义每一项视图
+ */
 @property (nonatomic, copy  ) JMSegmentControlViewBlock segmentControlViewBlock;
 
+/**
+ *@description 每一项的内容
+ */
 @property (nonatomic, strong) NSArray                   *items;
+
+/**
+ *@description 当前选中下标
+ */
 @property (nonatomic, assign) NSInteger                 selectedIndex;
-@property (nonatomic, strong) UIColor                   *selectedColor;// 选中文字颜色
-@property (nonatomic, retain) UIColor                   *unSelectedColor;// 未选中文字颜色
+
+/**
+ *@description 选中文字颜色
+ */
+@property (nonatomic, strong) UIColor                   *selectedColor;
+
+/**
+ *@description 未选中文字颜色
+ */
+@property (nonatomic, retain) UIColor                   *unSelectedColor;
+
+/**
+ *@description 文本字体大小
+ */
 @property (nonatomic, assign) CGFloat                   fontSize;
+
+/**
+ *@description 文本字体类型名
+ */
 @property (nonatomic, strong) NSString                  *fontName;
-@property (nonatomic, strong) NSString                  *selectedBackgroundName;
-@property (nonatomic, strong) NSString                  *unSelectedBackgroundName;
-@property (nonatomic, strong) UIColor                   *bottomLineViewColor;// 底下线条颜色(不为空时就用,优先级比selectedBackgroundName高)
-@property (nonatomic,assign ) float                     bottomLineViewHeight;// 默认3
+
+/**
+ *@description 选中时的背景图片名
+ */
+@property (nonatomic, strong) NSString                  *selectedBackgroundImgName;
+
+/**
+ *@description 未选中时的背景图片名
+ */
+@property (nonatomic, strong) NSString                  *unSelectedBackgroundImgName;
+
+/**
+ *@description 底下线条颜色
+ */
+@property (nonatomic, strong) UIColor                   *bottomLineViewColor;
+
+/**
+ *@description 底下线条高度，默认3
+ */
+@property (nonatomic,assign ) float                     bottomLineViewHeight;
 
 @end

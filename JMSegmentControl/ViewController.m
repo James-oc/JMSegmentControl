@@ -52,7 +52,7 @@
     _segmentControl.backgroundColor        = [UIColor whiteColor];
     _segmentControl.unSelectedColor        = [UIColor blackColor];
     _segmentControl.selectedColor          = [UIColor whiteColor];
-    _segmentControl.selectedBackgroundName = nil;
+    _segmentControl.selectedBackgroundImgName = nil;
     _segmentControl.selectedIndex          = 0;
     _segmentControl.bottomLineViewColor    = [UIColor orangeColor];
     _segmentControl.bottomLineViewHeight   = _segmentControl.frame.size.height;

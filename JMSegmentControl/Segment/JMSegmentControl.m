@@ -55,18 +55,19 @@
     for (int i = 0; i < _items.count; i++) {
         NSString *item = [_items objectAtIndex:i];
 
-        CGSize contentSize = CGSizeZero;
+        UIFont *textFont;
         if (_fontName == nil || [_fontName isEqualToString:@""]) {
-            NSDictionary *attribute = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:_fontSize],NSFontAttributeName, nil];
-            contentSize = [item boundingRectWithSize:CGSizeMake(FLT_MAX, 1) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
+            textFont = [UIFont systemFontOfSize:_fontSize];
         }else {
-            NSDictionary *attribute = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:_fontName size:_fontSize],NSFontAttributeName, nil];
-            contentSize = [item boundingRectWithSize:CGSizeMake(FLT_MAX, 1) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
+            textFont = [UIFont fontWithName:_fontName size:_fontSize];
         }
+        NSDictionary *attribute = [NSDictionary dictionaryWithObjectsAndKeys:textFont,NSFontAttributeName, nil];
+        CGSize contentSize      = [item boundingRectWithSize:CGSizeMake(FLT_MAX, 1) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
         
         [sizeArray addObject:[NSValue valueWithCGSize:contentSize]];
         totalWidth += contentSize.width;
     }
+    
     CGFloat x = 0.0;
     CGFloat separatorWidth = 0;
     for (int i = 0; i < _items.count; i++) {
@@ -125,18 +126,18 @@
                         viewFrame.origin.y     = CGRectGetHeight(viewFrame) - _bottomLineViewHeight;
                         viewFrame.size.height  = _bottomLineViewHeight;
                         _bottomLineView.frame  = viewFrame;
+                    }
+                    
+                    if (_selectedBackgroundImgName != nil && ![_selectedBackgroundImgName isEqualToString:@""]) {
+                        [btn setBackgroundImage:[UIImage imageNamed:_selectedBackgroundImgName] forState:UIControlStateNormal];
                     }else {
-                        if (_selectedBackgroundName != nil && ![_selectedBackgroundName isEqualToString:@""]) {
-                            [btn setBackgroundImage:[UIImage imageNamed:_selectedBackgroundName] forState:UIControlStateNormal];
-                        }else {
-                            [btn setBackgroundImage:nil forState:UIControlStateNormal];
-                        }
+                        [btn setBackgroundImage:nil forState:UIControlStateNormal];
                     }
                 }
                 else {
                     btn.selected  = NO;
-                    if (_unSelectedBackgroundName != nil && ![_unSelectedBackgroundName isEqualToString:@""]) {
-                        [btn setBackgroundImage:[UIImage imageNamed:_unSelectedBackgroundName] forState:UIControlStateNormal];
+                    if (_unSelectedBackgroundImgName != nil && ![_unSelectedBackgroundImgName isEqualToString:@""]) {
+                        [btn setBackgroundImage:[UIImage imageNamed:_unSelectedBackgroundImgName] forState:UIControlStateNormal];
                     }else {
                         [btn setBackgroundImage:nil forState:UIControlStateNormal];
                     }
@@ -181,15 +182,15 @@
     [self setSelectedIndex:_selectedIndex];
 }
 
--(void)setSelectedBackgroundName:(NSString *)selectedBackgroundName {
-    _selectedBackgroundName = selectedBackgroundName;
+-(void)setSelectedBackgroundImgName:(NSString *)selectedBackgroundImgName {
+    _selectedBackgroundImgName = selectedBackgroundImgName;
     [self redraw];
     bIsRedraw = true;
     [self setSelectedIndex:_selectedIndex];
 }
 
--(void)setUnSelectedBackgroundName:(NSString *)unSelectedBackgroundName {
-    _unSelectedBackgroundName = unSelectedBackgroundName;
+-(void)setUnSelectedBackgroundImgName:(NSString *)unSelectedBackgroundImgName {
+    _unSelectedBackgroundImgName = unSelectedBackgroundImgName;
     [self redraw];
     bIsRedraw = true;
     [self setSelectedIndex:_selectedIndex];
