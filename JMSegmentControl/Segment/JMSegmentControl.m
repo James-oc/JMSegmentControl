@@ -15,7 +15,6 @@
     BOOL    bIsRedraw;
     UIView  *_bottomLineView;
 }
-
 @end
 
 @implementation JMSegmentControl
@@ -51,7 +50,8 @@
     }
     
     NSMutableArray *sizeArray = [[NSMutableArray alloc] initWithCapacity:_items.count];
-    CGFloat totalWidth = 0.0;
+    CGFloat totalWidth        = 0.0;
+    
     for (int i = 0; i < _items.count; i++) {
         NSString *item = [_items objectAtIndex:i];
 
@@ -68,11 +68,12 @@
         totalWidth += contentSize.width;
     }
     
-    CGFloat x = 0.0;
+    CGFloat x              = 0.0;
     CGFloat separatorWidth = 0;
+    
     for (int i = 0; i < _items.count; i++) {
         NSString *item = [_items objectAtIndex:i];
-        CGFloat width = (self.frame.size.width - totalWidth - separatorWidth) / _items.count + [[sizeArray objectAtIndex:i] CGSizeValue].width;
+        CGFloat width  = (self.frame.size.width - totalWidth - separatorWidth) / _items.count + [[sizeArray objectAtIndex:i] CGSizeValue].width;
         UIButton *itemBtn;
         if (_segmentControlViewBlock != nil) {
             itemBtn = _segmentControlViewBlock(self,i,_items);
@@ -92,7 +93,7 @@
         }
         
         itemBtn.frame = CGRectMake(x, 0, width, self.frame.size.height);
-        itemBtn.tag = (i + JM_Seg_Btn_Origin_Tag);
+        itemBtn.tag   = (i + JM_Seg_Btn_Origin_Tag);
         [itemBtn addTarget:self
                     action:@selector(onClick:)
           forControlEvents:UIControlEventTouchUpInside];
@@ -120,6 +121,7 @@
                             _bottomLineView.backgroundColor = _bottomLineViewColor;
                             [self addSubview:_bottomLineView];
                         }
+                        
                         [self bringSubviewToFront:btn];
                         
                         CGRect viewFrame       = btn.frame;
@@ -161,56 +163,56 @@
     [self redraw];
 }
 
--(void)setFontSize:(CGFloat)fontSize {
+- (void)setFontSize:(CGFloat)fontSize {
     _fontSize = fontSize;
     [self redraw];
     bIsRedraw = true;
     [self setSelectedIndex:_selectedIndex];
 }
 
--(void)setUnSelectedColor:(UIColor *)unSelectedColor {
+- (void)setUnSelectedColor:(UIColor *)unSelectedColor {
     _unSelectedColor = unSelectedColor;
     [self redraw];
     bIsRedraw = true;
     [self setSelectedIndex:_selectedIndex];
 }
 
--(void)setSelectedColor:(UIColor *)selectedColor {
+- (void)setSelectedColor:(UIColor *)selectedColor {
     _selectedColor = selectedColor;
     [self redraw];
     bIsRedraw = true;
     [self setSelectedIndex:_selectedIndex];
 }
 
--(void)setSelectedBackgroundImgName:(NSString *)selectedBackgroundImgName {
+- (void)setSelectedBackgroundImgName:(NSString *)selectedBackgroundImgName {
     _selectedBackgroundImgName = selectedBackgroundImgName;
     [self redraw];
     bIsRedraw = true;
     [self setSelectedIndex:_selectedIndex];
 }
 
--(void)setUnSelectedBackgroundImgName:(NSString *)unSelectedBackgroundImgName {
+- (void)setUnSelectedBackgroundImgName:(NSString *)unSelectedBackgroundImgName {
     _unSelectedBackgroundImgName = unSelectedBackgroundImgName;
     [self redraw];
     bIsRedraw = true;
     [self setSelectedIndex:_selectedIndex];
 }
 
--(void)setBottomLineViewColor:(UIColor *)bottomLineViewColor {
+- (void)setBottomLineViewColor:(UIColor *)bottomLineViewColor {
     _bottomLineViewColor = bottomLineViewColor;
     [self redraw];
     bIsRedraw = YES;
     [self setSelectedIndex:_selectedIndex];
 }
 
--(void)setBottomLineViewHeight:(float)bottomLineViewHeight {
+- (void)setBottomLineViewHeight:(float)bottomLineViewHeight {
     _bottomLineViewHeight = bottomLineViewHeight;
     [self redraw];
     bIsRedraw = YES;
     [self setSelectedIndex:_selectedIndex];
 }
 
--(void)setSegmentControlViewBlock:(JMSegmentControlViewBlock)segmentControlViewBlock {
+- (void)setSegmentControlViewBlock:(JMSegmentControlViewBlock)segmentControlViewBlock {
     _segmentControlViewBlock = segmentControlViewBlock;
     [self redraw];
     bIsRedraw = YES;
