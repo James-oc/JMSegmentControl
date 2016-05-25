@@ -33,14 +33,14 @@
     
     _segmentControl.segmentControlViewBlock = ^(JMSegmentControl *segmentControl,NSInteger btnIndex,NSArray *itemArray) {
         // 在此自定义每项的视图
-        UIButton *imageBtn = [UIButton getImageBtnWithImageTitleBtnType:CImageUpTitleBottom 
-                                                                  title:itemArray[btnIndex] 
-                                                    unSelectedImageName:@"Tab_Mine_UnSelected" 
-                                                      selectedImageName:@"Tab_Mine_Selected"
-                                                    unSelectedTextColor:segmentControl.unSelectedColor 
-                                                      selectedTextColor:segmentControl.selectedColor 
-                                                           withTextFont:[UIFont systemFontOfSize:segmentControl.fontSize]     
-                                                            withBtnType:UIButtonTypeCustom];
+        UIButton *imageBtn = [UIButton getImageBtnWithWithType:UIButtonTypeCustom
+                                                  titleBtnType:CImageUpTitleBottom
+                                                         title:itemArray[btnIndex]
+                                                     titleFont:[UIFont systemFontOfSize:segmentControl.fontSize]
+                                           unSelectedImageName:@"Tab_Mine_UnSelected"
+                                             selectedImageName:@"Tab_Mine_Selected"
+                                           unSelectedTextColor:segmentControl.unSelectedColor
+                                             selectedTextColor:segmentControl.selectedColor];
         UIEdgeInsets insets                 = imageBtn.imageEdgeInsets;
         insets.bottom                       = 0;
         imageBtn.imageEdgeInsets            = insets;
