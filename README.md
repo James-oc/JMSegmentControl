@@ -2,7 +2,7 @@
 ---
 
 ## 效果
-![Alt Text](https://github.com/xiaobs/JMShareSource/raw/master/screenshots/OC/JMSegmentControl/JMSegmentControl效果.gif)
+![Alt Text](https://github.com/James-oc/JMShareSource/raw/master/screenshots/OC/JMSegmentControl/JMSegmentControl效果.gif)
 
 ## 代码
 以下是示例参考代码：
